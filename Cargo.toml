@@ -1,5 +1,6 @@
 [workspace]
 members = [
     "rule_on_scrollable",
+    "toggler_with_fixed_width"
 ]
 resolver = "2"

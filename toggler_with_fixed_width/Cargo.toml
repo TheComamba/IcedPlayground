@@ -1,5 +1,5 @@
 [package]
-name = "rule_on_scrollable"
+name = "toggler_with_fixed_width"
 version = "0.1.0"
 edition = "2021"
 
