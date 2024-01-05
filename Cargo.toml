@@ -1,0 +1,5 @@
+[workspace]
+members = [
+    "rule_on_scrollable",
+]
+resolver = "2"
