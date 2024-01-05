@@ -2,6 +2,7 @@
 Trying out several things in Rust's Iced GUI Framework.
 
 ## Canvas Coordinates
+The bounds.contains check of the Canvas widget does not seem to work properly. If the canvas top-left does not coincide with the window top-left then the check interprets the point as if it lived in the window frame of reference, not the canvas frame of reference.
 
 To test this, run:
 ```

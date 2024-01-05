@@ -1,5 +1,5 @@
 use iced::{
-    alignment::Vertical,
+    alignment::{Horizontal, Vertical},
     widget::{canvas, canvas::Path, Column, Row, Text},
     Color, Point, Sandbox,
 };
@@ -30,8 +30,14 @@ impl Sandbox for Gui {
     fn update(&mut self, _message: Self::Message) {}
 
     fn view(&self) -> iced::Element<'_, Self::Message> {
-        let vertical_offset = Text::new("Vertical Offset").height(iced::Length::Fixed(250.));
-        let horizontal_offset = Text::new("Horizontal Offset").width(iced::Length::Fixed(250.));
+        let vertical_offset = Text::new("Vertical Offset")
+            .height(iced::Length::Fixed(250.))
+            .vertical_alignment(Vertical::Center)
+            .horizontal_alignment(Horizontal::Center);
+        let horizontal_offset = Text::new("Horizontal Offset")
+            .width(iced::Length::Fixed(250.))
+            .vertical_alignment(Vertical::Center)
+            .horizontal_alignment(Horizontal::Center);
 
         Column::new()
             .push(vertical_offset)
