@@ -1,7 +1,7 @@
 use iced::{
     alignment::{Horizontal, Vertical},
     widget::{canvas, canvas::Path, Column, Row, Text},
-    Color, Point, Sandbox,
+    Color, Pixels, Point, Sandbox,
 };
 
 fn main() -> iced::Result {
@@ -106,7 +106,7 @@ impl<GuiMessage> canvas::Program<GuiMessage> for Gui {
                         text.content = format!("({}, {})", x, y);
                         text.position = point;
                         text.color = Color::WHITE;
-                        text.size = 15.;
+                        text.size = Pixels(15.);
                         if !bounds.contains(point) {
                             text.content = format!("({}, {})\nNot inside\nbounds", x, y);
                             text.color.a = 0.5;
